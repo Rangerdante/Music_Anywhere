@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :songs
+
 	resources :users
 	resources :sessions, :only => [:new, :create, :destroy]
 	
