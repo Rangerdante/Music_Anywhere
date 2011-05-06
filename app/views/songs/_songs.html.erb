@@ -5,4 +5,9 @@
 			Uploaded <%= time_ago_in_words(song.created_at) %> ago.
 		</span>
 	</td>
+	<% if current_user?(song.user) %>
+	<td>
+		<%= link_to "delete", song, :method => :delete,
+									:confirm => "You sure?",
+									:title => song.songname %>
 </tr>
