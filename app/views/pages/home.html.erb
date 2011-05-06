@@ -1,7 +1,20 @@
-
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="song">Add a song?</h1>
+        <%= render 'shared/song_form' %>
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
 <h1>Music Anywhere</h1>
 <p>
   Welcome to Music Anywhere! New here? Why don't you 
 </p>
  
  <%= link_to "Sign up now!", new_path, :class => "signup_button round" %>
+ <% end %>

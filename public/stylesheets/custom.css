@@ -183,3 +183,48 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+h1.song {
+	margin-bottom: 0.3em;
+}
+
+table.songs {
+	margin-top: 1em;
+}
+
+table.songs tr {
+	height: 70 px;
+}
+
+table.songs tr td.song {
+	border-top: 1px solid #ccc;
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+table.songs tr td.song span.timestamp {
+	display: block;
+	font-size: 85%;
+	color: #666;
+}
+
+div.user_info img {
+	padding-right: 0.1em;
+}
+
+div.user_info a {
+	text-decoration: none;
+}
+
+div.user_info span.user_name {
+	position: absolute;
+}
+
+form.new_song {
+	margin-bottom: 2em;
+}
+
+form.new_song textarea {
+	height: 4em;
+	margin-bottom: 0;
+}

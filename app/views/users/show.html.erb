@@ -4,10 +4,17 @@
       <h1>        
         <%= @user.name %>
       </h1>
+		<% unless @user.songs.empty? %>
+			<table class="songs" summary="User songs">
+				<%= render @songs %>
+			</table>
+				<%= will_paginate @songs %>
+			<% end %>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+	  <strong>Songs</strong> <%= @user.songs.count %>
     </td>
   </tr>
 </table>

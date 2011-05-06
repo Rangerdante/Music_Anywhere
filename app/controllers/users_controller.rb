@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 	
   def show
 	@user = User.find(params[:id])
+	@songs = @user.songs.paginate(:page => params[:page])
 	@title = @user.name
   end	
   
@@ -39,13 +40,10 @@ class UsersController < ApplicationController
 	end
   end
   
+  
  
 
-private
-
-	def authenticate
-		deny_access unless signed_in?
-	end
+private	
 	
 	def correct_user
 		@user = User.find(params[:id])
