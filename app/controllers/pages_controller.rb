@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
   def home
    @title = "Home"
-   @song = Song.new if signed_in?
+   if signed_in?
+	@song = Song.new
+	@feed_items = current_user.feed.paginate(:page => params[:page])
   end
 
   def contact

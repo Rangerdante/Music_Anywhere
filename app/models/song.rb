@@ -6,5 +6,5 @@ class Song < ActiveRecord::Base
 	validates :songname, :presence => true, :length => { :maximum => 30 }
 	validates :user_id, :presence => true
 	
-	default_scope :order => 'microposts.created_at DESC'
+	default_scope :order => 'songs.created_at DESC'
 end
